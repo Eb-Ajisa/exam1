@@ -11,6 +11,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: JoshHack
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -21,7 +25,7 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
-          cache-dependency-path: pom.xml
+          cache-dependency-path: JoshHack/pom.xml
 
       - name: Run JUnit regression tests
         run: bash ./mvnw test
@@ -36,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: pit-report
-          path: target/pit-reports/
+          path: JoshHack/target/pit-reports/
