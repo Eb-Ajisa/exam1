@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="game.InventoryTest" time="0.058" tests="6" errors="0" skipped="0" failures="0" flakes="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="game.InventoryTest" time="0.065" tests="6" errors="0" skipped="0" failures="0" flakes="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\ebby2\AppData\Local\Temp\surefire610077138074099376\surefirebooter-20261106011442877_3.jar C:\Users\ebby2\AppData\Local\Temp\surefire610077138074099376 2026-11-06T01-14-42_712-jvmRun1 surefire-20261106011442877_1tmp surefire_0-20261106011442877_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ebby2\AppData\Local\Temp\surefire5730552128706454992\surefirebooter-20261106031044003_3.jar C:\Users\ebby2\AppData\Local\Temp\surefire5730552128706454992 2026-11-06T03-10-43_775-jvmRun1 surefire-20261106031044003_1tmp surefire_0-20261106031044003_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\ebby2\Downloads\Exam\JoshHack\target\test-classes;C:\Users\ebby2\Downloads\Exam\JoshHack\target\classes;C:\Users\ebby2\Downloads\Exam\JoshHack\libs\asciiPanel.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.1\junit-jupiter-5.14.1.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.1\junit-jupiter-api-5.14.1.jar;C:\Users\ebby2\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\ebby2\.m2\repository\org\junit\platform\junit-platform-commons\1.14.1\junit-platform-commons-1.14.1.jar;C:\Users\ebby2\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.1\junit-jupiter-params-5.14.1.jar;C:\Users\ebby2\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.1\junit-jupiter-engine-5.14.1.jar;C:\Users\ebby2\.m2\repository\org\junit\platform\junit-platform-engine\1.14.1\junit-platform-engine-1.14.1.jar"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ebby2\AppData\Local\Temp\surefire610077138074099376\surefirebooter-20261106011442877_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ebby2\AppData\Local\Temp\surefire5730552128706454992\surefirebooter-20261106031044003_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.4.1+1-LTS"/>
@@ -59,10 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testGetItems" classname="game.InventoryTest" time="0.028"/>
-  <testcase name="testAdd" classname="game.InventoryTest" time="0.001"/>
-  <testcase name="testGet" classname="game.InventoryTest" time="0.003"/>
-  <testcase name="testContains" classname="game.InventoryTest" time="0.001"/>
-  <testcase name="testIsFull" classname="game.InventoryTest" time="0.001"/>
+  <testcase name="testGetItems" classname="game.InventoryTest" time="0.03"/>
+  <testcase name="testAdd" classname="game.InventoryTest" time="0.002"/>
+  <testcase name="testGet" classname="game.InventoryTest" time="0.004"/>
+  <testcase name="testContains" classname="game.InventoryTest" time="0.002"/>
+  <testcase name="testIsFull" classname="game.InventoryTest" time="0.002"/>
   <testcase name="testRemove" classname="game.InventoryTest" time="0.001"/>
 </testsuite>
