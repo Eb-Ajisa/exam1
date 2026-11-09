@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>CombatRules.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package game;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>public class CombatRules {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Calculates the new hit points based on the current hit points, maximum hit points, and a change amount, ensuring it does not exceed the maximum.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param currentHp the current hit points of the character</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param maxHp the maximum hit points the character can have</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param amount the amount to adjust the current hit points by</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @return the new hit points value after adjustment, capped at maxHp</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static int calculateNewHp(int currentHp, int maxHp, int amount) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_13'/>
+13
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_13'>1</a>
+<span>
+
+1. calculateNewHp : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        int newHp = currentHp + amount;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_15'/>
+15
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_15'>2</a>
+<span>
+
+1. calculateNewHp : changed conditional boundary &rarr; SURVIVED<br/>
+
+2. calculateNewHp : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        if (newHp &#62; maxHp)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_16'>1</a>
+<span>
+
+1. calculateNewHp : replaced int return with 0 for game/CombatRules::calculateNewHp &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return maxHp;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_18'>1</a>
+<span>
+
+1. calculateNewHp : replaced int return with 0 for game/CombatRules::calculateNewHp &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return newHp;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * Determines if a character is dead based on their hit points.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @param hp the current hit points of the character</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     * @return true if hp is less than 1, indicating death; otherwise false</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>     */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static boolean isDead(int hp) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_27'/>
+27
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_27'>3</a>
+<span>
+
+1. isDead : negated conditional &rarr; KILLED<br/>
+
+2. isDead : changed conditional boundary &rarr; KILLED<br/>
+
+3. isDead : replaced boolean return with true for game/CombatRules::isDead &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return hp &#60; 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_13'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateNewHp<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#3]</span></span> Replaced integer addition with subtraction &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_15'>15</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_15'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateNewHp<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</span>
+<a title="Click to view covering tests" class="view-covered-by-tests" onClick="document.getElementById('MutationIdentifier-[location=Location-[clazz=game.CombatRules,-method=calculateNewHp,-methodDesc=(III)I],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display=(document.getElementById('MutationIdentifier-[location=Location-[clazz=game.CombatRules,-method=calculateNewHp,-methodDesc=(III)I],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]').style.display == 'block')?'none':'block';">Covering tests</a>
+<div class="covered-tests" id="MutationIdentifier-[location=Location-[clazz=game.CombatRules,-method=calculateNewHp,-methodDesc=(III)I],-indexes=[11],-mutator=org.pitest.mutationtest.engine.gregor.mutators.ConditionalsBoundaryMutator]" style="display:none;">Covered by tests:
+<ul>
+<li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#3]</li> <li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#2]</li> <li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#5]</li> <li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#4]</li> <li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#6]</li> <li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#1]</li> <li>game.CreatureTest.[engine:junit-jupiter]/[class:game.CreatureTest]/[method:testModifyHp()]</li> <li>game.CreatureTest.[engine:junit-jupiter]/[class:game.CreatureTest]/[method:testModifyHpDeath()]</li> 
+</ul>
+</div></div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>calculateNewHp<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#2]</span></span> negated conditional &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateNewHp<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#2]</span></span> replaced int return with 0 for game/CombatRules::calculateNewHp &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>calculateNewHp<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#3]</span></span> replaced int return with 0 for game/CombatRules::calculateNewHp &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@7ae75ba6_27'>27</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@7ae75ba6_27'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isDead<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadTrue(int)]/[test-template-invocation:#2]</span></span> negated conditional &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isDead<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadFalse(int)]/[test-template-invocation:#1]</span></span> changed conditional boundary &rarr; KILLED</span>
+</div> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isDead<br/><b>Killed by : </b>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadFalse(int)]/[test-template-invocation:#3]</span></span> replaced boolean return with true for game/CombatRules::isDead &rarr; KILLED</span>
+</div> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#3] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#2] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#5] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#4] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#6] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testCalculateNewHp(int, int, int, int)]/[test-template-invocation:#1] (18 ms)</li><li>game.CreatureTest.[engine:junit-jupiter]/[class:game.CreatureTest]/[method:testModifyHp()] (0 ms)</li><li>game.CreatureTest.[engine:junit-jupiter]/[class:game.CreatureTest]/[method:testModifyHpDeath()] (11 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadTrue(int)]/[test-template-invocation:#2] (0 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadFalse(int)]/[test-template-invocation:#3] (1 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadFalse(int)]/[test-template-invocation:#2] (1 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadTrue(int)]/[test-template-invocation:#1] (1 ms)</li><li>game.CombatRulesTest.[engine:junit-jupiter]/[class:game.CombatRulesTest]/[test-template:testIsDeadFalse(int)]/[test-template-invocation:#1] (23 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.20.2
+
+</body>
+</html>
