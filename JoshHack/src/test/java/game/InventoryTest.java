@@ -64,15 +64,19 @@ public class InventoryTest {
     }
 
     @Test
-    void testGetItems() {
+    void testGetItemsReturnsSnapshot() {
         Inventory inventory = new Inventory(2);
         Item item = newItem();
         Item[] backingArray = inventory.getItems();
 
         assertEquals(2, backingArray.length);
         inventory.add(item);
-        assertSame(backingArray, inventory.getItems());
-        assertSame(item, backingArray[0]);
+        assertNotSame(backingArray, inventory.getItems());
+        assertNull(backingArray[0]);
+        assertSame(item, inventory.getItems()[0]);
+
+        backingArray[0] = null;
+        assertSame(item, inventory.getItems()[0]);
     }
 
     @Test

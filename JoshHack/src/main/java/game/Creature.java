@@ -2,6 +2,7 @@ package game;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -181,7 +182,7 @@ public class Creature {
 	 * Returns the list of active effects currently on this creature.
 	 * @return A List of active Effect instances affecting the creature.
 	 */
-	public List<Effect> effects(){ return effects; }
+	public List<Effect> effects(){ return Collections.unmodifiableList(effects); }
 	
 	private int maxMana;
 	/**
