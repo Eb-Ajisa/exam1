@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -30,11 +34,18 @@ jobs:
       - name: Run JUnit regression tests
         run: bash ./mvnw test
 
-      # Add PIT mutation testing later
       - name: Run PIT mutation testing
         run: bash ./mvnw test-compile org.pitest:pitest-maven:1.20.2:mutationCoverage
 
-      # Add PIT report artifact upload later
+      - name: Run SpotBugs analysis
+        run: bash ./mvnw compile spotbugs:spotbugs
+
+      - name: Upload SpotBugs SARIF results
+        if: success()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: JoshHack/target/spotbugsSarif.json
+
       - name: Upload PIT report
         if: always()
         uses: actions/upload-artifact@v4

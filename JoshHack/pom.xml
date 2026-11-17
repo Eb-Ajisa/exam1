@@ -57,6 +57,17 @@
                 </configuration>
             </plugin>
 
+            <!-- SpotBugs static analysis -->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.9.8.2</version>
+                <configuration>
+                    <xmlOutput>true</xmlOutput>
+                    <sarifOutput>true</sarifOutput>
+                </configuration>
+            </plugin>
+
             <!-- PIT mutation testing -->
             <plugin>
                 <groupId>org.pitest</groupId>
